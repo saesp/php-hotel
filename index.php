@@ -50,6 +50,19 @@
 </head>
 
 <body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">Distance to center</th> 
+            </tr>
+        </thead>
+    </table>
+
     <?php 
         foreach($hotels as $key => $hotel){
             $name = $hotel['name'];
@@ -58,18 +71,7 @@
             $vote = $hotel['vote'];
             $distance_to_center = $hotel['distance_to_center'];
     ?>
-                
             <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Parking</th>
-                        <th scope="col">Vote</th>
-                        <th scope="col">Distance to center</th> 
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                         <th scope="row"><?php echo $key ?></th>
