@@ -75,9 +75,9 @@
                         <th scope="row"><?php echo $key ?></th>
                         <td><?php echo $name ?></td>
                         <td><?php echo $description ?></td>
-                        <td><?php echo $parking ?></td>
-                        <td><?php echo $vote ?></td>
-                        <td><?php echo $distance_to_center ?></td>
+                        <td><?php echo $parking === true ? "Yes" : "No" ?></td>
+                        <td><?php echo $vote . "/5"  ?></td>
+                        <td><?php echo $distance_to_center . "Km" ?></td>
                     </tr>
                 </tbody>
             </table>
