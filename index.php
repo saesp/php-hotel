@@ -50,7 +50,6 @@
 </head>
 
 <body>
-<?php ?>
     <?php 
         foreach($hotels as $key => $hotel){
             $name = $hotel['name'];
@@ -58,17 +57,34 @@
             $parking = $hotel['parking'];
             $vote = $hotel['vote'];
             $distance_to_center = $hotel['distance_to_center'];
-
-            echo  "<ul>".
-                      "<li>" . 'NAME: ' . $name . "</li>" . '<br>' 
-                    . "<li>" . 'DESCRIPTION: ' . $description . "</li>" . '<br>' 
-                    . "<li>" . 'PARKING: ' . $parking . "</li>" . '<br>' 
-                    . "<li>" . 'VOTE: ' . $vote . "</li>" . '<br>' 
-                    . "<li>" . 'DISTANCE TO CENTER: ' . $distance_to_center . "</li>" . '<br><br>'
-                  ."</ul>" ;
-        };
-
     ?>
+                
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Parking</th>
+                        <th scope="col">Vote</th>
+                        <th scope="col">Distance to center</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $key ?></th>
+                        <td><?php echo $name ?></td>
+                        <td><?php echo $description ?></td>
+                        <td><?php echo $parking ?></td>
+                        <td><?php echo $vote ?></td>
+                        <td><?php echo $distance_to_center ?></td>
+                    </tr>
+                </tbody>
+            </table>
+        <?php } ?>
+        
+
+    
 
 
 
