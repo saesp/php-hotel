@@ -61,34 +61,25 @@
                 <th scope="col">Distance to center</th> 
             </tr>
         </thead>
-    </table>
 
-    <?php 
-        foreach($hotels as $key => $hotel){
+    <?php foreach($hotels as $key => $hotel){
             $name = $hotel['name'];
             $description = $hotel['description'];
             $parking = $hotel['parking'];
             $vote = $hotel['vote'];
-            $distance_to_center = $hotel['distance_to_center'];
-    ?>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th scope="row"><?php echo $key ?></th>
-                        <td><?php echo $name ?></td>
-                        <td><?php echo $description ?></td>
-                        <td><?php echo $parking === true ? "Yes" : "No" ?></td>
-                        <td><?php echo $vote . "/5"  ?></td>
-                        <td><?php echo $distance_to_center . "Km" ?></td>
-                    </tr>
-                </tbody>
+            $distance_to_center = $hotel['distance_to_center']; ?>
+
+            <tbody>
+                <tr>
+                    <th scope="row"><?php echo $key ?></th>
+                    <td><?php echo $name ?></td>
+                    <td><?php echo $description ?></td>
+                    <td><?php echo $parking === true ? "Yes" : "No" ?></td>
+                    <td><?php echo $vote . "/5 stars"  ?></td>
+                    <td><?php echo $distance_to_center . "Km" ?></td>
+                </tr>
+            </tbody>
+    <?php } ?>
             </table>
-        <?php } ?>
-        
-
-    
-
-
-
 </body>
 </html>
